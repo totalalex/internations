@@ -1,0 +1,11 @@
+{% extends 'AdminBundle::admin-layout.html.twig' %}
+{% form_theme form 'AdminBundle:Form:form-theme.html.twig' %}
+
+{% block content %}
+    <h3>UserGroup creation</h3>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="submit" value="Create" class="btn btn-success btn-small"/> <a href="{{ path('usergroup_index') }}" class="btn btn-primary btn-small">Back to the list</a>
+    {{ form_end(form) }}
+{% endblock %}

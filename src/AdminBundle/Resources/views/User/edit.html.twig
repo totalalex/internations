@@ -1,0 +1,15 @@
+{% extends 'AdminBundle::admin-layout.html.twig' %}
+{% form_theme edit_form 'AdminBundle:Form:form-theme.html.twig' %}
+
+{% block content %}
+    <h3>User edit</h3>
+
+    {{ form_start(edit_form) }}
+        {{ form_widget(edit_form) }}
+        <input type="submit" value="Edit" class="btn btn-success btn-small"/>     <a href="{{ path('user_index') }}" class="btn btn-primary btn-small">Back to the list</a>
+    {{ form_end(edit_form) }}
+
+    {{ form_start(delete_form) }}
+        <input type="submit" value="Delete" class="btn btn-danger btn-small">
+    {{ form_end(delete_form) }}
+{% endblock %}

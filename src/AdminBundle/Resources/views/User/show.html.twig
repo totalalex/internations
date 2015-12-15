@@ -1,0 +1,28 @@
+{% extends 'AdminBundle::admin-layout.html.twig' %}
+
+{% block content %}
+    <h3>User</h3>
+
+    <table class="table table-bordered" style="max-width: 300px">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ user.id }}</td>
+            </tr>
+            <tr>
+                <th>Username</th>
+                <td>{{ user.userName }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <a href="{{ path('user_index') }}" class="btn btn-primary btn-small">Back to the list</a>
+
+    <a href="{{ path('user_edit', { 'id': user.id }) }}" class="btn btn-warning btn-small">Edit</a>
+
+    {{ form_start(delete_form) }}
+        <input type="submit" value="Delete" class="btn btn-danger btn-small">
+    {{ form_end(delete_form) }}
+
+{% endblock %}

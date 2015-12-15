@@ -1,0 +1,15 @@
+api:
+    resource: "@ApiBundle/Controller/"
+    type:     annotation
+    prefix:   /api/{format}/
+    requirements:
+        format:  json|xml
+
+admin:
+    resource: "@AdminBundle/Controller/"
+    type:     annotation
+    prefix:   /admin/
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

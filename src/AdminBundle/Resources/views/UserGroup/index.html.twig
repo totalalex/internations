@@ -1,0 +1,34 @@
+{% extends 'AdminBundle::admin-layout.html.twig' %}
+
+{% block content %}
+    <h3>Groups List</h3>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for userGroup in userGroups %}
+            <tr>
+                <td><a href="{{ path('usergroup_show', { 'id': userGroup.id }) }}">{{ userGroup.id }}</a></td>
+                <td>{{ userGroup.name }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('usergroup_show', { 'id': userGroup.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('usergroup_edit', { 'id': userGroup.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a class="btn btn-primary btn-small" href="{{ path('usergroup_new') }}">Add new group</a>
+{% endblock %}

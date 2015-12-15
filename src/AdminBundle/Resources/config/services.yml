@@ -1,0 +1,8 @@
+services:
+    api_key_user_provider:
+        class: AdminBundle\Security\ApiKeyUserProvider
+        arguments: ['@service_container']
+
+    apikey_authenticator:
+        class:  AdminBundle\Security\ApiKeyAuthenticator
+        public: false

@@ -1,0 +1,15 @@
+# This file is a "template" of what your parameters.yml file should look like
+# Set parameters here that may be different on each deployment target of the app, e.g. development, staging, production.
+# http://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: internations
+    database_user: root
+    database_password: root
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: 8ec798723d3b2ec85d1f142aefe434657ae6d2a3
+    apikey: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
